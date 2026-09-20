@@ -109,3 +109,17 @@ A second virtual machine, Client-1, is created on the same Virtual Network. Clie
 - Active Directory relies heavily on DNS to locate domain services. Configuring the client to use the Domain Controller as its DNS server prepares the workstation for future domain-related labs.
 
   
+<p>
+  <img width="889" height="921" alt="image" src="https://github.com/user-attachments/assets/bfbe95a5-a18e-4c43-a12d-7e585c56f216" />
+
+</p>
+
+- I then connected to client-1 to make sure I have access and I set up the VM correctly.
+
+<p>
+  <img width="979" height="579" alt="image" src="https://github.com/user-attachments/assets/85ffbf83-b93b-4064-b3db-7a79d41a7eef" />
+
+</p>
+
+- I then used PowerShell an ran the command ping to communicate with DC-1
+- Ping uses Internet Control Message Protocol (ICMP) to test basic network reachability. A successful response demonstrates that Client-1 can communicate with DC-1 across the Azure Virtual Network.
