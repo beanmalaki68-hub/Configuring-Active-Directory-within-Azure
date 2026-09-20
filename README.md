@@ -2,7 +2,7 @@
 <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
 </p>
 
-<h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
+<h1>Preparing Active Directory infrastructure within Cloud (Azure)</h1>
 This lab focuses on preparing the infrastructure needed for an Active Directory (AD) environment in Microsoft Azure. The lab begins by creating an Azure Resource Group, Virtual Network, and subnet. A Windows Server 2025 virtual machine is then created to serve as the Domain Controller (DC-1).
 
 A second virtual machine, Client-1, is created on the same Virtual Network. Client-1 is configured to use the private Internet Protocol (IP) address of DC-1 for Domain Name System (DNS) resolution. Connectivity between the two virtual machines is then tested using ping and ipconfig /all.
