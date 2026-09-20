@@ -32,7 +32,8 @@ A second virtual machine, Client-1, is created on the same Virtual Network. Clie
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img width="1852" height="915" alt="image" src="https://github.com/user-attachments/assets/4237adf8-11cd-427d-99b6-a10160a24340" />
+<img width="1857" height="916" alt="image" src="https://github.com/user-attachments/assets/04a68180-d9d8-431c-8fac-f71057f9b47a" />
+
 
 </p>
 
@@ -44,17 +45,34 @@ A second virtual machine, Client-1, is created on the same Virtual Network. Clie
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1221" height="808" alt="image" src="https://github.com/user-attachments/assets/07b52556-1a6f-4b71-8330-7309a9c60754" />
+
 </p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
+
+- Next I created a Virtual Network and Subnet 
+- I created a Virtual Network and configured a subnet for the lab's virtual machines.
+- A Virtual Network provides the private networking environment that allows Azure resources to communicate with one another.
+- For an Active Directory environment, reliable network communication between the Domain Controller and clients is essential.
+
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1842" height="912" alt="image" src="https://github.com/user-attachments/assets/76142737-7ea8-412f-8777-1c6e27994b43" />
+
 </p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
+
+
+- The next step is to create the first virtual machine.
+- I created a Windows Server 2025 virtual machine named DC-1(Domain Controller).
+- A Domain Controller is responsible for providing centralized identity and authentication services within an Active Directory domain.
+
 <br />
+
+<p>
+  <img width="1802" height="911" alt="image" src="https://github.com/user-attachments/assets/7a96633d-82f3-4be8-9c69-1e4c9c69ba6c" />
+
+</p>
+
+- The next step is to create the client computer that will eventually communicate with the Domain Controller.
+- I created a Windows 11 virtual machine named Client-1.
+- Client-1 will represent a workstation that communicates with the Active Directory infrastructure hosted by DC-1.
