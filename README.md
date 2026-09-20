@@ -32,11 +32,15 @@ A second virtual machine, Client-1, is created on the same Virtual Network. Clie
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1852" height="915" alt="image" src="https://github.com/user-attachments/assets/4237adf8-11cd-427d-99b6-a10160a24340" />
+
 </p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
+
+- The first step is to create a Resource Group in Azure.
+- A Resource Group provides a logical container for the Azure resources used in this lab.
+- I created a new Resource Group in Microsoft Azure that will contain the resources used for the Active Directory infrastructure.
+- Resource Groups make it easier to organize, manage, monitor, and eventually remove related Azure resources.
+
 <br />
 
 <p>
