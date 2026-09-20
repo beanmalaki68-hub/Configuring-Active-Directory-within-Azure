@@ -76,3 +76,15 @@ A second virtual machine, Client-1, is created on the same Virtual Network. Clie
 - The next step is to create the client computer that will eventually communicate with the Domain Controller.
 - I created a Windows 11 virtual machine named Client-1.
 - Client-1 will represent a workstation that communicates with the Active Directory infrastructure hosted by DC-1.
+
+<p>
+  <img width="693" height="852" alt="image" src="https://github.com/user-attachments/assets/1fef9f7f-413b-4a7f-b1b4-ace98052ee91" />
+
+</p>
+
+- After creating DC-1, configure its Network Interface Card (NIC) so that its private IP address is static.
+- I configured the private IP address assigned to DC-1 as static through Azure.
+- A Domain Controller needs a predictable network address.
+- Client computers will eventually need to know where to find services provided by the Domain Controller, including DNS and Active Directory services.
+
+  
