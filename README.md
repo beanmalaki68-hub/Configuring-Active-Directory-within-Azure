@@ -88,3 +88,12 @@ A second virtual machine, Client-1, is created on the same Virtual Network. Clie
 - Client computers will eventually need to know where to find services provided by the Domain Controller, including DNS and Active Directory services.
 
   
+<p>
+  
+</p>
+
+- Next I logged into DC-1 and disabled the Windows Firewall for lab testing
+- I logged into the Windows Server 2025 virtual machine using Remote Desktop.
+- This allows the lab to isolate basic network connectivity problems while testing communication between DC-1 and Client-1.
+
+  Security Note: Disabling a firewall is not recommended for a production system. This is being done specifically because the provided lab checklist calls for it during connectivity testing.
