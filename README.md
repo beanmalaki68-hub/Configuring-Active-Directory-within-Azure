@@ -89,7 +89,8 @@ A second virtual machine, Client-1, is created on the same Virtual Network. Clie
 
   
 <p>
-  
+  <img width="1292" height="959" alt="image" src="https://github.com/user-attachments/assets/759f8735-6928-4391-8d2f-d378cb76f703" />
+
 </p>
 
 - Next I logged into DC-1 and disabled the Windows Firewall for lab testing
