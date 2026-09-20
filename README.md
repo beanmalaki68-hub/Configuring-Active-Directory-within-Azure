@@ -98,3 +98,14 @@ A second virtual machine, Client-1, is created on the same Virtual Network. Clie
 - This allows the lab to isolate basic network connectivity problems while testing communication between DC-1 and Client-1.
 
   Security Note: Disabling a firewall is not recommended for a production system. This is being done specifically because the provided lab checklist calls for it during connectivity testing.
+
+<p>
+  <img width="1140" height="552" alt="image" src="https://github.com/user-attachments/assets/ff5b631e-7e02-46b8-9c74-a796bf63cb4b" />
+
+</p>
+
+- The next step would be to make sure that client-1 DNS it is pointing at the DC-1.
+- I configured the DNS settings on Client-1 so that the preferred DNS server is the private IP address assigned to DC-1.
+- Active Directory relies heavily on DNS to locate domain services. Configuring the client to use the Domain Controller as its DNS server prepares the workstation for future domain-related labs.
+
+  
