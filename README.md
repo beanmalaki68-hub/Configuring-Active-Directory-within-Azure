@@ -131,9 +131,3 @@ A second virtual machine, Client-1, is created on the same Virtual Network. Clie
 
 - I then ran ipconfig /all from client-1 and examined the DNS server configuration
 - The DNS configurations showed DC-1's Private IP address as the DNS server so everything has been set-up correctly so far.
-
-# Summary
-
-This lab established the foundational infrastructure for an Active Directory environment in Microsoft Azure. I created an Azure Resource Group, Virtual Network, subnet, Windows Server 2025 Domain Controller named DC-1, and Windows 10 client named Client-1. I configured DC-1 with a static private IP address and configured Client-1 to use DC-1 as its DNS server. I then verified communication between the two virtual machines using ping and confirmed the DNS configuration with ipconfig /all.
-
-This lab provided hands-on experience with Azure networking, Windows Server, virtual machines, IP addressing, DNS, and basic network troubleshooting while preparing the environment for future Active Directory labs.
