@@ -73,3 +73,22 @@ I then logged into the Domain Controller and temporarily disabled the Windows Fi
 
 
 https://youtu.be/EcfDTyIQlb4
+
+# Step 6 - Configuring the User VM to use the Domian Controller as the DNS server
+
+Then, I configured the User VM's network settings to use the Domain Controller as its DNS server. I did this so that the User VM can use the Domain Controller's DNS service to locate and communicate with the Active Directory domain in our later labs.
+
+
+<h2>Video Walkthrough</h2>
+
+https://youtu.be/aAMBOMso87s
+
+
+# Step 7 - Testing connectivity 
+
+I then logged into the User VM and pinged the Domain Controller to verify that the two virtual machines were able to communicate over the network. I also ran the ipconfig /all command to verify that the Domain Controller's IP address was configured as the User VM's DNS server.
+
+
+<h2>Video Walkthrough</h2>
+
+https://youtu.be/8GIcbO44VBU
