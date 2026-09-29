@@ -65,4 +65,11 @@ After that, I configured the Domain Controller's IP address as static. I did thi
 
 https://youtu.be/KWmgiNGlb0k
 
-# Step 5 - 
+# Step 5 - Logging into the Domain Controller and disabling the Firewall (for the lab)
+
+I then logged into the Domain Controller and temporarily disabled the Windows Firewall. I did this so that the firewall would not interfere with network connectivity or block traffic while we test and configure the environment in the lab.
+
+<h2>Video Walkthrough</h2>
+
+
+https://youtu.be/EcfDTyIQlb4
