@@ -1,12 +1,12 @@
 <p align="center">
 <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
-</p>
 
 <h1>Preparing Active Directory infrastructure within Cloud (Azure)</h1>
-This lab focuses on preparing the infrastructure needed for an Active Directory (AD) environment in Microsoft Azure. The lab begins by creating an Azure Resource Group, Virtual Network, and subnet. A Windows Server 2025 virtual machine is then created to serve as the Domain Controller (DC-1).
 
-A second virtual machine, Client-1, is created on the same Virtual Network. Client-1 is configured to use the private Internet Protocol (IP) address of DC-1 for Domain Name System (DNS) resolution. Connectivity between the two virtual machines is then tested using ping and ipconfig /all.
-.<br />
+
+
+https://github.com/user-attachments/assets/1de4cce0-1846-44d3-b060-8e2eed8d4406
+
 
 
 <h2>Environments and Technologies Used</h2>
@@ -29,105 +29,40 @@ A second virtual machine, Client-1, is created on the same Virtual Network. Clie
 - Configure Client DNS and Connectivity
 - Verify the Network Configuration
 
-<h2>Deployment and Configuration Steps</h2>
+# Step 1 - Creating a resoucre group and virtual network
 
-<p>
-<img width="1857" height="916" alt="image" src="https://github.com/user-attachments/assets/04a68180-d9d8-431c-8fac-f71057f9b47a" />
+The first thing I did was create a resource group in Microsoft Azure to organize and manage the resources for the virtual environment I was creating. Then, I created a virtual network for the two virtual machines to connect to. This virtual network provides the network infrastructure that allows the virtual machines to communicate with each other.
 
+<h2>Video Walkthorugh</h2>
 
-</p>
-
-- The first step is to create a Resource Group in Azure.
-- A Resource Group provides a logical container for the Azure resources used in this lab.
-- I created a new Resource Group in Microsoft Azure that will contain the resources used for the Active Directory infrastructure.
-- Resource Groups make it easier to organize, manage, monitor, and eventually remove related Azure resources.
-
-<br />
-
-<p>
-<img width="1221" height="808" alt="image" src="https://github.com/user-attachments/assets/07b52556-1a6f-4b71-8330-7309a9c60754" />
-
-</p>
-
-- Next I created a Virtual Network and Subnet 
-- I created a Virtual Network and configured a subnet for the lab's virtual machines.
-- A Virtual Network provides the private networking environment that allows Azure resources to communicate with one another.
-- For an Active Directory environment, reliable network communication between the Domain Controller and clients is essential.
-
-<br />
-
-<p>
-<img width="1842" height="912" alt="image" src="https://github.com/user-attachments/assets/76142737-7ea8-412f-8777-1c6e27994b43" />
-
-</p>
+https://youtu.be/ztGit00URzU
 
 
-- The next step is to create the first virtual machine.
-- I created a Windows Server 2025 virtual machine named DC-1(Domain Controller).
-- A Domain Controller is responsible for providing centralized identity and authentication services within an Active Directory domain.
 
-<br />
+# Step 2 - Creating the Domain Controller 
 
-<p>
-  <img width="1802" height="911" alt="image" src="https://github.com/user-attachments/assets/7a96633d-82f3-4be8-9c69-1e4c9c69ba6c" />
+I then created a Windows Server virtual machine that would be configured to act as the Domain Controller (DC) for the environment. The server would host Active Directory Domain Services (AD DS), which provides the services needed to manage users, computers, and other resources within the domain.
 
-</p>
+<h2>Video Walkthrough</h2>
 
-- The next step is to create the client computer that will eventually communicate with the Domain Controller.
-- I created a Windows 11 virtual machine named Client-1.
-- Client-1 will represent a workstation that communicates with the Active Directory infrastructure hosted by DC-1.
+https://youtu.be/25Zd2apIPf0
 
-<p>
-  <img width="693" height="852" alt="image" src="https://github.com/user-attachments/assets/1fef9f7f-413b-4a7f-b1b4-ace98052ee91" />
 
-</p>
+# Step 3 - Creating a VM to act as a user in Active Directory 
 
-- After creating DC-1, configure its Network Interface Card (NIC) so that its private IP address is static.
-- I configured the private IP address assigned to DC-1 as static through Azure.
-- A Domain Controller needs a predictable network address.
-- Client computers will eventually need to know where to find services provided by the Domain Controller, including DNS and Active Directory services.
+Next, I created another virtual machine (VM) in Azure. This VM will be used as a client computer that I will join to the Active Directory domain and use as a user workstation in upcoming labs.
 
-  
-<p>
-  <img width="1292" height="959" alt="image" src="https://github.com/user-attachments/assets/759f8735-6928-4391-8d2f-d378cb76f703" />
 
-</p>
+<h2>Video Walkthrough</h2>
 
-- Next I logged into DC-1 and disabled the Windows Firewall for lab testing
-- I logged into the Windows Server 2025 virtual machine using Remote Desktop.
-- This allows the lab to isolate basic network connectivity problems while testing communication between DC-1 and Client-1.
+https://youtu.be/oO_7CMsn0I0
 
-  Security Note: Disabling a firewall is not recommended for a production system. This is being done specifically because the provided lab checklist calls for it during connectivity testing.
+# Step 4 - Setting the Domain Controllers Private IP to Static 
 
-<p>
-  <img width="1140" height="552" alt="image" src="https://github.com/user-attachments/assets/ff5b631e-7e02-46b8-9c74-a796bf63cb4b" />
+After that, I configured the Domain Controller's IP address as static. I did this because I will be configuring the user VM to use the Domain Controller as its DNS server. The Domain Controller's IP address needs to remain consistent so that the user VM can reliably find and communicate with the correct DNS server.
 
-</p>
+<h2>Video Walkthrough</h2>
 
-- The next step would be to make sure that client-1 DNS it is pointing at the DC-1.
-- I configured the DNS settings on Client-1 so that the preferred DNS server is the private IP address assigned to DC-1.
-- Active Directory relies heavily on DNS to locate domain services. Configuring the client to use the Domain Controller as its DNS server prepares the workstation for future domain-related labs.
+https://youtu.be/KWmgiNGlb0k
 
-  
-<p>
-  <img width="889" height="921" alt="image" src="https://github.com/user-attachments/assets/bfbe95a5-a18e-4c43-a12d-7e585c56f216" />
-
-</p>
-
-- I then connected to client-1 to make sure I have access and I set up the VM correctly.
-
-<p>
-  <img width="979" height="579" alt="image" src="https://github.com/user-attachments/assets/85ffbf83-b93b-4064-b3db-7a79d41a7eef" />
-
-</p>
-
-- I then used PowerShell an ran the command ping to communicate with DC-1
-- Ping uses Internet Control Message Protocol (ICMP) to test basic network reachability. A successful response demonstrates that Client-1 can communicate with DC-1 across the Azure Virtual Network.
-
-<p>
-  <img width="1463" height="751" alt="image" src="https://github.com/user-attachments/assets/5033877b-8957-4ccf-b17c-bf204889646d" />
-
-</p>
-
-- I then ran ipconfig /all from client-1 and examined the DNS server configuration
-- The DNS configurations showed DC-1's Private IP address as the DNS server so everything has been set-up correctly so far.
+# Step 5 - 
